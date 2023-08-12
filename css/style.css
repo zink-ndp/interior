@@ -139,6 +139,20 @@ textarea{
 	overflow:hidden;	
 }
 
+.fit-image{
+	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    height: 250px; /* Đặt chiều cao cho các thẻ div */
+    box-sizing: border-box;
+}
+
 button{
 	outline: none !important;
 	cursor: pointer;
@@ -2676,6 +2690,7 @@ img{
 	position:relative;
 	width:100%;
 	display:block;
+	object-fit: cover;
 	-webkit-transform:translateX(50px) scale(1.3,1.3);
 	-ms-transform:translateX(50px) scale(1.3,1.3);
 	transform:translateX(50px) scale(1.3,1.3);
@@ -6950,6 +6965,7 @@ img{
 	width:100%;
 	display:block;
 	transition: all 0.5s ease;
+	object-fit: cover;
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
