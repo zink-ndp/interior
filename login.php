@@ -40,9 +40,9 @@
     <!-- End Main Header -->
 
     <!-- main -->
-    <main class="main-content  mt-0">
+    <main class="main-content pt-8">
     <section>
-      <div class="page-header min-vh-100">
+      <div class="page-header min-vh-75">
         <div class="container">
           <div class="row">
             <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
@@ -60,7 +60,7 @@
                       <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Password" aria-label="Password" id="passInput">
                     </div>
                     <div class="mb-3 d-flex justify-content-center">                      
-                      <button class="btn btn-link" type="button" id="showPasswordBtn">
+                      <button class="" type="button" id="showPasswordBtn">
                         Hiện mật khẩu <i class="fa fa-eye" aria-hidden="true"></i>
                       </button>
                     </div>
@@ -69,14 +69,14 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div> -->
                     <div class="text-center">
-                      <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-n3 mb-0">Đăng nhập</button>
+                      <button type="submit" class="theme-btn btn-style-one w-100 mt-n3 mb-0">Đăng nhập</button>
                     </div>
                   </form>
                   <div class="text-center">
                     <p class="mt-3 text-xs text-secondary ">- Hoặc -</p>
                   </div>
                   <div class="text-center">
-                    <a href="../index.php" class="btn btn-lg btn-outline-primary text-primary btn-lg w-100 mt-0 mb-0">Quay lại trang bán hàng</a>
+                    <a href="../index.php" class="theme-btn cart-btn w-100 mt-0 mb-0">Quay lại trang bán hàng</a>
                   </div>
                 </div>
                 <script>
@@ -102,9 +102,9 @@
               </div>
             </div>
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+              <div class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');
           background-size: cover;">
-                <span class="mask bg-gradient-primary opacity-6"></span>
+                <span class="bg-gradient-primary opacity-6"></span>
                 <h4 class="mt-5 text-white font-weight-bolder position-relative">"Forish ornamental fish shop"</h4>
                 <p class="text-white position-relative">Let the captivating beauty of our ornamental fish rejuvenate your living space with a touch of nature's artistry. Our store offers an extensive selection of fish species, featuring vibrant colors, unique patterns, and exquisite shapes- elevating your aquarium to a breathtaking work of art.</p>
               </div>
