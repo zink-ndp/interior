@@ -9,7 +9,7 @@
                     <!--Nav Box-->
                     <div class="nav-outer clearfix">
                         <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
+                        <nav class="main-menu navbar-expand-md">
                             <div class="navbar-header">
                                 <!-- Togg le Button -->      
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

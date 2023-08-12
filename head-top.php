@@ -1,4 +1,4 @@
-<div class="header-top">
+<div class="header-top" style="top: 0 !important;">
             <div class="auto-container clearfix">
                 <div class="top-left clearfix">
                     <div class="text"><span class="icon flaticon-call-answer"></span> Cần giúp đỡ? Gọi ngay: <a href="tel:0377899959" class="number">037 789 9959</a></div>

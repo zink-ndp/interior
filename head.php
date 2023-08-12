@@ -3,6 +3,9 @@
 <title>Zink Orr'a - Interior and Home Renovation</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style2.css" rel="stylesheet">
+<link href="css/argon-dashboard.css" rel="stylesheet">
+<link href="css/argon-dashboard.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
