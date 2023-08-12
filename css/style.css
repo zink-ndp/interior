@@ -1205,10 +1205,12 @@ img{
 	transition:all 600ms ease;
 }
 
+
 .main-header .outer-box .search-box-btn .icon{
 	padding-left:20px;
 	border-left:1px solid #888989;
 }
+
 
 .main-header .outer-box .btn-box{
 	position:relative;

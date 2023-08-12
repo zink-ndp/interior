@@ -11,4 +11,6 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 
+	session_start();
+
 ?>

@@ -52,13 +52,6 @@
                                             <li><a href="projects-fullwidth.html">Project Full Screen</a></li>
                                         </ul>
                                     </li>
-									<li class="dropdown"><a href="blog.html">Tin tức</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-2.html">blog 2 column</a></li>
-                                            <li><a href="blog-detail.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
 									<li class="dropdown"><a href="shop.html">Shop</a>
                                         <ul>
                                             <li><a href="shop.html">Main shop page</a></li>
@@ -76,6 +69,9 @@
 						<!-- Outer Box -->
                         <div class="outer-box clearfix">
                             <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+                            <a href="login.php">
+                                <div class="search-box-btn"><span class="icon flaticon-user"></span> Đăng nhập</div>
+                            </a>
                         </div>
                     </div>
                 </div>

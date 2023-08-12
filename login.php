@@ -15,7 +15,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <!-- <div class="preloader"></div> -->
+    <div class="preloader"></div>
 
     <header class="main-header header-style-one">
         <!--Header Top-->
@@ -48,19 +48,19 @@
             <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
               <div class="card card-plain">
                 <div class="card-header pb-0 text-start">
-                  <h4 class="font-weight-bolder">Đăng nhập trang quản lý</h4>
-                  <p class="mb-0">Nhập username và password để đăng nhập</p>
+                  <h4 class="font-weight-bolder">Đăng nhập</h4>
+                  <p class="mb-0">Chào mừng bạn</p>
                 </div>
                 <div class="card-body">
                   <form role="form" method="post" action="log.php">
                     <div class="mb-3">
-                      <input required type="text" name="usname" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
+                      <input required type="text" name="usname" class="form-control form-control-lg" placeholder="Email hoặc SĐT" aria-label="Username">
                     </div>
                     <div class="mb-3">
-                      <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Password" aria-label="Password" id="passInput">
+                      <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Mật khẩu" aria-label="Password" id="passInput">
                     </div>
-                    <div class="mb-3 d-flex justify-content-center">                      
-                      <button class="" type="button" id="showPasswordBtn">
+                    <div class="mb-3 mt-n2 d-flex justify-content-center">                      
+                      <button class="theme-btn" type="button" id="showPasswordBtn">
                         Hiện mật khẩu <i class="fa fa-eye" aria-hidden="true"></i>
                       </button>
                     </div>
@@ -69,15 +69,13 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div> -->
                     <div class="text-center">
-                      <button type="submit" class="theme-btn btn-style-one w-100 mt-n3 mb-0">Đăng nhập</button>
+                      <button type="submit" class="theme-btn btn-style-one w-100 mt-n1 mb-0">Đăng nhập</button>
+                    </div>
+                    Chưa có tài khoản?
+                    <div class="text-center">
+                      <button type="submit" class="theme-btn btn-style-two w-100 mb-0">Đăng kí ngay</button>
                     </div>
                   </form>
-                  <div class="text-center">
-                    <p class="mt-3 text-xs text-secondary ">- Hoặc -</p>
-                  </div>
-                  <div class="text-center">
-                    <a href="../index.php" class="theme-btn cart-btn w-100 mt-0 mb-0">Quay lại trang bán hàng</a>
-                  </div>
                 </div>
                 <script>
                   const passInput = document.getElementById('passInput');
