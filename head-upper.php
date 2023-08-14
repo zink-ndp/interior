@@ -61,6 +61,23 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Liên hệ</a></li>
+                                    <?php
+                                        if (isset($_SESSION["id"])){
+                                            ?>
+                                                <li class="dropdown"><a href="myaccount.php"></span>Hi, <?php echo $_SESSION["lname"] ?></a>
+                                                    <ul>
+                                                        <li><a href="about.html">Thông tin cá nhân</a></li>
+                                                        <li><a href="team.html">Đổi mật khẩu</a></li>
+                                                        <li><a href="logout.php">Đăng xuất</a></li>
+                                                    </ul>
+                                                </li>
+                                            <?php
+                                        } else {
+                                            ?>
+                                                <li><a href="login.php"><span class="icon "><i class="fas fa-user"></i></span>  Đăng nhập</a></li>
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </nav>
@@ -69,9 +86,6 @@
 						<!-- Outer Box -->
                         <div class="outer-box clearfix">
                             <div class="search-box-btn"><span class="icon"></span><i class="fas fa-search"></i></div>
-                            <a href="login.php">
-                                <div class="search-box-btn"><span class="icon "><i class="fas fa-user"></i></span>  Đăng nhập</div>
-                            </a>
                         </div>
                     </div>
                 </div>
