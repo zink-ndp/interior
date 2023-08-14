@@ -10,7 +10,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <!-- <div class="preloader"></div> -->
+    <div class="preloader"></div>
 
     <header class="main-header header-style-one">
         <!--Header Top-->
@@ -452,7 +452,7 @@
 					</div>
 					<a href="https://www.youtube.com/watch?v=SXZXtD60t2g" class="overlay-link lightbox-image">
 						<div class="icon-box">
-							<span class="icon flaticon-play-button"></span>
+							<span class="icon"><i class="fas fa-play"></i></span>
                             <i class="ripple"></i>
 						</div>
 					</a>
@@ -558,7 +558,7 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="icon-outer">
 							<div class="icon-box">
-								<span class="icon flaticon-hand-shake"></span>
+								<span class="icon"><i class="fas fa-handshake"></i></span>
 							</div>
 							<div class="feature-number">1</div>
 						</div>
@@ -574,7 +574,7 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="250ms" data-wow-duration="1500ms">
 						<div class="icon-outer">
 							<div class="icon-box">
-								<span class="icon flaticon-answer"></span>
+								<span class="icon"><i class="fab fa-discourse"></i></span>
 							</div>
 							<div class="feature-number">2</div>
 						</div>
@@ -590,7 +590,7 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
 						<div class="icon-outer">
 							<div class="icon-box">
-								<span class="icon flaticon-sketch"></span>
+								<span class="icon"><i class="fas fa-pencil-ruler"></i></span>
 							</div>
 							<div class="feature-number">3</div>
 						</div>
@@ -606,7 +606,7 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="750ms" data-wow-duration="1500ms">
 						<div class="icon-outer">
 							<div class="icon-box">
-								<span class="icon flaticon-house-1"></span>
+								<span class="icon"><i class="fas fa-paint-roller"></i></span>
 							</div>
 							<div class="feature-number">4</div>
 						</div>

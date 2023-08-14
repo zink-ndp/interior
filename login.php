@@ -2,7 +2,6 @@
 <html lang="en">
 
 <?php
-  session_start();
   require 'connect.php';
 ?>
 
@@ -60,8 +59,8 @@
                       <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Mật khẩu" aria-label="Password" id="passInput">
                     </div>
                     <div class="mb-3 mt-n2 d-flex justify-content-center">                      
-                      <button class="theme-btn" type="button" id="showPasswordBtn">
-                        Hiện mật khẩu <i class="fa fa-eye" aria-hidden="true"></i>
+                      <button class="bg_white" type="button" id="showPasswordBtn">
+                        <span class="txt">Hiện mật khẩu  </span><i class="fa fa-eye" aria-hidden="true"></i>
                       </button>
                     </div>
                     <!-- <div class="form-check form-switch">
@@ -69,11 +68,11 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div> -->
                     <div class="text-center">
-                      <button type="submit" class="theme-btn btn-style-one w-100 mt-n1 mb-0">Đăng nhập</button>
+                      <button type="submit" class="theme-btn btn-style-one w-100 mt-n1 mb-0"><span class="txt">Đăng nhập</span></button>
                     </div>
-                    Chưa có tài khoản?
+                    <span class="txt mt-2">Chưa có tài khoản?</span>
                     <div class="text-center">
-                      <button type="submit" class="theme-btn btn-style-two w-100 mb-0">Đăng kí ngay</button>
+                      <button type="submit" class="theme-btn btn-style-two w-100 mb-0"><span class="txt">Đăng kí ngay</span></button>
                     </div>
                   </form>
                 </div>

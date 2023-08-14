@@ -68,9 +68,9 @@
 						
 						<!-- Outer Box -->
                         <div class="outer-box clearfix">
-                            <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+                            <div class="search-box-btn"><span class="icon"></span><i class="fas fa-search"></i></div>
                             <a href="login.php">
-                                <div class="search-box-btn"><span class="icon flaticon-user"></span> Đăng nhập</div>
+                                <div class="search-box-btn"><span class="icon "><i class="fas fa-user"></i></span>  Đăng nhập</div>
                             </a>
                         </div>
                     </div>
