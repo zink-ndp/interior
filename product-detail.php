@@ -60,10 +60,17 @@
                                     <div class="text"><?php echo $row['PD_DESCRI'] ?></div>
                                     <div class="price">Price : <span><?php echo number_format($row['PD_PRICE']) ?> VND</span></div>
                                     
-                                    <div class="other-options clearfix">
-                                        <span class="price">Số lượng</span> :</label><input class="quant_number price ms-3" type="number" value="1" min="1" name="quantity"><br>
-                                        <button type="button" class="theme-btn cart-btn">Thêm vào giỏ hàng</button>
-                                        <button type="button" class="theme-btn cart-btn ms-3">Thanh toán ngay</button>
+                                    <div class="clear-fix row">
+                                        <div class="col-12">
+                                            <form action="add-cart.php" method="post">
+                                                <span class="price">Số lượng</span> :</label><input class="quant_number price ms-3" type="number" value="1" min="1" name="quant"><br>
+                                                <input type="hidden" name="pdid" value="<?php echo $row["PD_ID"] ?>">
+                                                <button type="submit" class="theme-btn cart-btn px-4">Thêm vào giỏ hàng</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="theme-btn cart-btn mt-4 px-4">Thanh toán ngay</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -7930,12 +7930,12 @@ img{
 
 .cart-table tbody tr td{
 	line-height:24px;
-	padding:25px 30px 25px;
+	padding:25px 20px 25px;
 }
 
 .cart-table tbody tr .qty{
-	width:200px;
-	padding-right:80px;
+	width:70px;
+	padding-right:10px;
 }
 
 .cart-table tbody tr .qty .quantity-spinner{
@@ -7954,7 +7954,7 @@ img{
 
 .cart-table tbody tr .prod-column .column-box .prod-thumb img{
 	 display:block;
-	 max-width:100%;
+	 max-width:150%;
 }
 
 .cart-table tbody tr .prod-column .column-box h4{
@@ -8012,7 +8012,7 @@ img{
 }
 
 .cart-table tbody tr .total-price{
-	font-weight:600;
+	font-weight:500;
 	font-family: 'Open Sans', sans-serif;
 }
 

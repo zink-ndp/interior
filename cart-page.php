@@ -33,29 +33,51 @@
                     <table class="cart-table">
                         <thead class="cart-header">
                             <tr>
-                            	<th>Hình ảnh</th>
-                            	<th class="prod-column">Tên sản phẩm</th>
-                                <th class="price">Đơn giá</th>
-                                <th>Số lượng</th>
-                                <th>Tổng tiền</th>
-                                <th>&nbsp;</th>
+                            	<th class="col-2">Hình ảnh</th>
+                            	<th class="col-3">Tên sản phẩm</th>
+                                <th class="col-2">Đơn giá</th>
+                                <th class="col-2">Số lượng</th>
+                                <th class="col-2">Tổng tiền</th>
+                                <th class="col-1">&nbsp;</th>
                             </tr>
                         </thead>
 
                         <tbody>
+                            <?php
+
+                                $cid = $_SESSION["id"];
+                                $sl = 0;
+                                $sql = "select PD_ID, PD_QUANT from cart_detail where CTM_ID = {$cid}";
+                                $rs = $conn->query($sql);
+                                $total = 0;
+                                foreach ($rs as $sp) {
+                                    $sl += 1;
+                                    $spid = $sp["PD_ID"];
+                                    $query = "select p.PD_NAME, p.PD_PRICE, p.PD_PIC 
+                                                from products p 
+                                                join cart_detail cd on cd.PD_ID = p.PD_ID
+                                                where p.PD_ID = $spid";
+                                    $result = $conn->query($query);
+                                    foreach ($result as $s) {
+                                        
+                            ?>
                         	<tr>
                                 <td class="prod-column">
                                     <div class="column-box">
-                                        <figure class="prod-thumb"><a href="#"><img src="images/resource/products/8.jpg" alt=""></a></figure>
+                                        <figure class="prod-thumb"><a href="product-detail.php?id=<?php echo $spid ?>"><img src="images/products/<?php echo $s["PD_PIC"] ?>" alt=""></a></figure>
                                     </div>
                                 </td>
-                                <td><h4 class="prod-title">Tool</h4></td>
-                                <td class="sub-total">$25.00</td>
-                                <td class="qty"><div class="item-quantity"><input class="quantity-spinner" type="text" value="2" name="quantity"></div></td>
-                                <td class="total-price">$25.00</td>
-                                <td><a href="#" class="remove-btn"><span class="fas fa-times"></span></a></td>
+                                <td><h4 class="prod-title"><?php echo $s["PD_NAME"] ?></h4></td>
+                                <td><?php echo number_format($s["PD_PRICE"]) ?> đ</td>
+                                <td><?php echo $sp["PD_QUANT"] ?></td>
+                                <td><?php echo number_format($s["PD_PRICE"]*$sp["PD_QUANT"]) ?> đ</td>
+                                <td><a href="remove-in-cart.php?pdid=<?php echo $spid ?>" class="remove-btn"><span class="fas fa-times"></span></a></td>
                             </tr>
-
+                            <?php
+                                        $total +=  $s["PD_PRICE"]*$sp["PD_QUANT"];
+                                    }
+                                } 
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -84,13 +106,29 @@
 					</div>
 					
                     <div class="column col-lg-5 col-md-7 col-sm-12">
-                        <!--Totals Table-->
-                        <ul class="totals-table">
-                        	<li><h3>Tổng giỏ hàng</h3></li>
-                            <!-- <li class="clearfix"><span class="col">Sub Total</span><span class="col">$25.00</span></li> -->
-                            <li class="clearfix total"><span class="col">Total</span><span class="col price">$25.00</span></li>
-                            <li class="text-right"><button type="submit" class="theme-btn proceed-btn">Thanh toán</button></li>
-                        </ul>
+                        <form action="payment-page.php" method="post">
+                            <!--Totals Table-->
+                            <ul class="totals-table">
+                                <li><h3>Tổng giỏ hàng</h3></li>
+                                <!-- <li class="clearfix"><span class="col">Sub Total</span><span class="col">$25.00</span></li> -->
+                                <li class="clearfix total"><span class="col">Tổng tiền</span><span class="col price"><?php echo number_format($total) ?> đ</span></li>
+                                <li class="clearfix total"><span class="col">Phương thức</span>
+                                    <select required name="payment" id="">
+                                        <?php
+                                            $sql = "SELECT * FROM payment";
+                                            $result = $conn->query($sql);
+                                                if ($result->num_rows > 0) {
+                                                $result = $conn->query($sql);
+                                                $result_all = $result -> fetch_all(MYSQLI_ASSOC);
+                                                foreach ($result_all as $row) {
+                                        ?>
+                                            <option value="<?php echo $row["PM_ID"] ?>"><?php echo $row["PM_NAME"] ?></option>
+                                        <?php }} ?>
+                                    </select>
+                                </li>
+                                <li class="text-right"><button type="submit" class="theme-btn proceed-btn">Thanh toán</button></li>
+                            </ul>
+                        </form>
 					</div>
 				</div>
 			</div>
