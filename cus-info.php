@@ -17,7 +17,6 @@ require 'head.php';
 			require 'head-upper.php';
 			require 'mobile-menu.php';
 			?>
-
 		</header>
 
 		<!--Page Title-->
