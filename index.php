@@ -9,7 +9,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
 
     <header class="main-header header-style-one">
         <!--Header Top-->
@@ -708,6 +708,7 @@
 </div>  
 <!--End pagewrapper-->
 
+<script>var BotStar={appId:"sdf3e8bd6-2af1-42e2-832e-61f026f59e99",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.BotStarApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.botstar.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
@@ -716,7 +717,6 @@
 	include "search-popup.php";
 ?>
 
-<!--Scroll to top-->
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/jquery-ui.js"></script>

@@ -238,7 +238,7 @@
 
 <!--Search Popup-->
 <?php
-    include "ssearch-popup.php";
+    include "search-popup.php";
 ?>
 
 <!--Scroll to top-->

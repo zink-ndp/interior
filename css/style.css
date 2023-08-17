@@ -666,7 +666,7 @@ img{
 
 .scroll-to-top{
 	position:fixed;
-	bottom:20px;
+	bottom:100px !important;
 	right:20px;
 	width:48px;
 	height:48px;
