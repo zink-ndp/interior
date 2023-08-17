@@ -7423,6 +7423,12 @@ img{
 	width:80px;
 }
 
+.quant_number{
+	width: 50px !important;
+	height: 40px !important;
+	border: #f4f5f6 1px solid !important;
+}
+
 .product-details .basic-details .cart-btn{
 	position: relative;
     display: inline-block;

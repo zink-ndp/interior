@@ -49,7 +49,7 @@
 							<h2>Đưa căn nhà trong mơ <br> thành hiện thực</h2>
 							<div class="text">Since 1989, We inspired fragments of your life stories with the finest kitchens, wardrobes, bedroom sets and living & dining.</div>
 							<div class="btns-box">
-								<a href="#" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
+								<a href="#services-section" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
 							</div>
 						</div>
 					</div>
@@ -63,7 +63,7 @@
 							<h2>Thiết kế phù hợp với<br> Phong cách của bạn</h2>
 							<div class="text">Since 1989, We inspired fragments of your life stories with the finest kitchens, wardrobes, bedroom sets and living & dining.</div>
 							<div class="btns-box">
-								<a href="#" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
+								<a href="#services-section" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
 							</div>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 							<h2>Giải pháp cho <br> Căn bếp hiện đại</h2>
 							<div class="text">Since 1989, We inspired fragments of your life stories with the finest kitchens, wardrobes, bedroom sets and living & dining.</div>
 							<div class="btns-box">
-								<a href="#" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
+								<a href="#services-section" class="theme-btn btn-style-one"><span class="txt">Tìm hiểu thêm</span></a>
 							</div>
 						</div>
 					</div>

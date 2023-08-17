@@ -1,170 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- stella-orre/product-detail.html  30 Nov 2019 03:52:14 GMT -->
-<head>
-<meta charset="utf-8">
-<title>Stella Orr'e - Interior and Home Renovation HTML Template | Shop Detail</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
+<?php
+    require 'connect.php';
+    require 'head.php';
+?>
 
 <body>
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
 
     <header class="main-header header-style-one">
         <!--Header Top-->
-        <div class="header-top">
-            <div class="auto-container clearfix">
-                <div class="top-left clearfix">
-                    <div class="text"><span class="icon flaticon-call-answer"></span> Need help? Call Us Now : <a href="tel:1800-456-7890" class="number">1800 456 7890</a></div>
-					
-                </div>
-                <div class="top-right clearfix">
-                    <!-- Info List -->
-					<ul class="info-list">
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="blog.html">Inspiration</a></li>
-						<li class="quote"><a href="contact.html">Get Free Quote</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <?php require 'head-top.php' ?>
         <!-- End Header Top -->
 
         <!-- Header Upper -->
-        <div class="header-upper">
-            <div class="inner-container">
-                <div class="auto-container clearfix">
-                    <!--Info-->
-                    <div class="logo-outer">
-                        <div class="logo"><a href="index-2.html"><img src="images/logo.png" alt="" title=""></a></div>
-                    </div>
-
-                    <!--Nav Box-->
-                    <div class="nav-outer clearfix">
-                        <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="navbar-header">
-                                <!-- Togg le Button -->      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon flaticon-menu-1"></span>
-                                </button>
-                            </div>
-                            
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="index-2.html">Home</a>
-                                        <ul>
-                                            <li><a href="index-2.html">Home page 01</a></li>
-                                            <li><a href="index-3.html">Home page 02</a></li>
-                                            <li><a href="index-4.html">Home page 03</a></li>
-											<li><a href="index-5.html">Home page 04</a></li>
-                                            <li><a href="index-6.html">Home page 05</a></li>
-                                            <li class="dropdown"><a href="index-2.html">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index-2.html">Header Style One</a></li>
-                                                    <li><a href="index-3.html">Header Style Two</a></li>
-                                                    <li><a href="index-4.html">Header Style Three</a></li>
-													<li><a href="index-5.html">Header Style Four</a></li>
-                                                    <li><a href="index-6.html">Header Style Five</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-									<li class="dropdown"><a href="about.html">About us</a>
-                                        <ul>
-                                            <li><a href="about.html">Our Introduction</a></li>
-											<li><a href="team.html">Our Team</a></li>
-											<li><a href="testimonials.html">Testimonials</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="services-dark.html">Services</a>
-                                        <ul>
-											<li><a href="services-dark.html">Services Layout 01</a></li>
-											<li><a href="services-light.html">Services Layout 02</a></li>
-                                            <li><a href="residental-interior.html">Residential Interior</a></li>
-                                            <li><a href="commercial-interior.html">Commercial Interior</a></li>
-                                            <li><a href="office-interior.html">Office Design</a></li>
-                                            <li><a href="hospitality-design.html">Hospitality Design</a></li>
-                                            <li><a href="modern-furniture.html">Modern Furniture</a></li>
-											<li><a href="modular-kitchen.html">Modular Kitchen</a></li>
-											<li><a href="wardrobe.html">Wardrobe</a></li>
-											<li><a href="false-celling-design.html">False Celling Design</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="projects-classic.html">Projects</a>
-                                        <ul>
-                                            <li><a href="projects-classic.html">Projects Classic</a></li>
-                                            <li><a href="projects-masonry.html">Project Masonry</a></li>
-                                            <li><a href="projects-fullwidth.html">Project Full Screen</a></li>
-                                        </ul>
-                                    </li>
-									<li class="dropdown"><a href="blog.html">Blog</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-2.html">blog 2 column</a></li>
-                                            <li><a href="blog-detail.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-									<li class="current dropdown"><a href="shop.html">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Main shop page</a></li>
-                                            <li><a href="product-detail.html">Product Detail Page</a></li>
-                                            <li><a href="cart-page.html">Cart Page</a></li>
-											<li><a href="checkout.html">Checkout</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- Main Menu End-->
-						
-						<!-- Outer Box -->
-                        <div class="outer-box clearfix">
-                            <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php require 'head-upper.php' ?>
         <!--End Header Upper-->
 
     	<!-- Mobile Menu  -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
-            
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="index-2.html"><img src="images/logo.png" alt="" title=""></a></div>
-                <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
-				<!--Social Links-->
-				<div class="social-links">
-					<ul class="clearfix">
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-					</ul>
-                </div>
-            </nav>
-        </div><!-- End Mobile Menu -->
+        <?php require 'mobile-menu.php' ?>
+        <!-- End Mobile Menu -->
 
     </header>
     <!-- End Main Header -->
@@ -172,11 +31,7 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/5.jpg)">
     	<div class="auto-container">
-        	<h2>Product Details</h2>
-            <ul class="page-breadcrumb">
-            	<li><a href="index-2.html">home</a></li>
-                <li>Product Details</li>
-            </ul>
+        	<h2>Chi tiết sản phẩm</h2>
         </div>
     </section>
     <!--End Page Title-->
@@ -189,20 +44,27 @@
                 <div class="product-details">
                     
                     <!--Basic Details-->
+                    <?php
+                        $spid = $_GET['id'];
+                        $query = "select * from products where PD_ID = ".$spid;
+                        $result = $conn->query($query);
+                        $row = $result->fetch_assoc();
+                    ?>
                     <div class="basic-details">
                         <div class="row clearfix">
                             <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                                <figure class="image-box"><a href="images/resource/products/9.jpg" class="lightbox-image" title="Image Caption Here"><img src="images/resource/products/9.jpg" alt=""></a></figure>
+                                <figure class="image-box"><a href="images/resource/products/9.jpg" class="lightbox-image" title="Image Caption Here"><img src="images/products/<?php echo $row['PD_PIC'] ?>" alt=""></a></figure>
                             </div>
                             <div class="info-column col-lg-6 col-md-12 col-sm-12">
                             	<div class="inner-column">
-                                    <h4>MULTI-WAY ULTRA</h4>
-                                    <div class="text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequ untur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, </div>
-                                    <div class="price">Price : <span>$24.5</span></div>
+                                    <h4><?php echo $row['PD_NAME'] ?></h4>
+                                    <div class="text"><?php echo $row['PD_DESCRI'] ?></div>
+                                    <div class="price">Price : <span><?php echo number_format($row['PD_PRICE']) ?> VND</span></div>
                                     
                                     <div class="other-options clearfix">
-                                        <div class="item-quantity"><label class="field-label">Quantity :</label><input class="quantity-spinner" type="text" value="2" name="quantity"></div>
-                                        <button type="button" class="theme-btn cart-btn">Add to cart</button>
+                                        <span class="price">Số lượng</span> :</label><input class="quant_number price ms-3" type="number" value="1" min="1" name="quantity"><br>
+                                        <button type="button" class="theme-btn cart-btn">Thêm vào giỏ hàng</button>
+                                        <button type="button" class="theme-btn cart-btn ms-3">Thanh toán ngay</button>
                                     </div>
                                 </div>
                             </div>

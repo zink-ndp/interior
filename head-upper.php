@@ -52,10 +52,10 @@
                                             <li><a href="projects-fullwidth.html">Project Full Screen</a></li>
                                         </ul>
                                     </li>
-									<li class="dropdown"><a href="shop.html">Shop</a>
+									<li class="dropdown"><a href="shop.php">Shop</a>
                                         <ul>
-                                            <li><a href="shop.html">Main shop page</a></li>
-                                            <li><a href="product-detail.html">Product Detail Page</a></li>
+                                            <li><a href="shop.php">Main shop page</a></li>
+                                            <li><a href="product-detail.php">Product Detail Page</a></li>
                                             <li><a href="cart-page.html">Cart Page</a></li>
 											<li><a href="checkout.html">Checkout</a></li>
                                         </ul>

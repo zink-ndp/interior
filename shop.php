@@ -155,7 +155,17 @@
             
             <div class="row clearfix">
                 <?php
+                    // Số sản phẩm trên mỗi trang
+                    $productsPerPage = 12;
+
+                    // Xác định trang hiện tại từ biến GET
+                    $current_page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+
+                    // Truy vấn lấy dữ liệu sản phẩm từ cơ sở dữ liệu
+                    $offset = ($current_page - 1) * $productsPerPage;
+
                     $sql = "SELECT * FROM products";
+                    $sql = $sql." LIMIT $offset, $productsPerPage";
                     $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         $result = $conn->query($sql);
@@ -166,18 +176,18 @@
                 <div class="shop-item col-lg-4 col-md-5 col-sm-12">
                 	<div class="inner-box">
                     	<div class="image-container">
-                        	<a href="product-detail.html"><img class="fit-image" src="images/products/<?php echo $row["PD_PIC"] ?>" alt="" /></a>
+                        	<a href="product-detail.php?id=<?php echo $row["PD_ID"] ?>"><img class="fit-image" src="images/products/<?php echo $row["PD_PIC"] ?>" alt="" /></a>
 							<div class="overlay-box">
                                 <ul class="option-box">
-                                    <li><a href="#"><span class="far fa-heart"></span></a></li>
+                                    <li><a href="product-detail.php?id=<?php echo $row["PD_ID"] ?>"><i class="fas fa-eye"></i></a></li>
                                     <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                    <li><a href="images/resource/products/1.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
+                                    <li><a href="images/products/<?php echo $row["PD_PIC"] ?>" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
                                 </ul>
                             </div>
                             <!-- <div class="tag-banner">New</div> -->
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="product-detail.html"><?php echo $row["PD_NAME"] ?></a></h3>
+                        	<h3><a href="product-detail.php?id=<?php echo $row["PD_ID"] ?>"><?php echo $row["PD_NAME"] ?></a></h3>
                             <div class="price"><?php echo number_format($row["PD_PRICE"]) ?> VND</div>
                         </div>
                     </div>
@@ -194,9 +204,23 @@
             <div class="shop-pagination">
                 <ul class="clearfix">
                     <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <?php
+                            // Tính số trang dựa trên tổng số sản phẩm
+                        $q = "SELECT COUNT(*) AS total FROM products";
+                        $rs = $conn->query($q);
+
+                        if ($rs->num_rows > 0) {
+                            $r = $rs->fetch_assoc();
+                            $total_products = $r['total'];
+                        } else {
+                            $total_products = 0;
+                        }
+                        $total_pages = ceil($total_products / $productsPerPage);
+                        for ($i = 1; $i <= $total_pages; $i++) {
+                            $active_class = ($i == $current_page) ? 'active' : '';
+                            echo '<li class="' . $active_class . '"><a href="shop.php?page='.$i.'">'.$i.'</a></li>';
+                        }
+                    ?>
                     <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
                 </ul>
             </div>
