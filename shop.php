@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-  require 'connect.php';
-?>
-
 <!-- stella-orre/shop.html  30 Nov 2019 03:52:07 GMT -->
 <?php
     require 'head.php';

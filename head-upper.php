@@ -45,29 +45,14 @@
                                         </ul>
                                     </li>
                                     <li> <a href="shop.php">Sản phẩm</a>  </li>
-                                    <li class="dropdown"><a href="projects-classic.html">Nội thất</a>
-                                        <ul>
-                                            <li><a href="projects-classic.html">Projects Classic</a></li>
-                                            <li><a href="projects-masonry.html">Project Masonry</a></li>
-                                            <li><a href="projects-fullwidth.html">Project Full Screen</a></li>
-                                        </ul>
-                                    </li>
-									<li class="dropdown"><a href="shop.php">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.php">Main shop page</a></li>
-                                            <li><a href="product-detail.php">Product Detail Page</a></li>
-                                            <li><a href="cart-page.html">Cart Page</a></li>
-											<li><a href="checkout.html">Checkout</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a href="contact.html">Liên hệ</a></li>
                                     <?php
                                         if (isset($_SESSION["id"])){
                                             ?>
                                                 <li class="dropdown"><a href="myaccount.php"></span>Hi, <?php echo $_SESSION["lname"] ?></a>
                                                     <ul>
-                                                        <li><a href="about.html">Thông tin cá nhân</a></li>
-                                                        <li><a href="team.html">Đổi mật khẩu</a></li>
+                                                        <li><a href="cus-info.php">Thông tin cá nhân</a></li>
+                                                        <li><a href="change-pw.php">Đổi mật khẩu</a></li>
                                                         <li><a href="logout.php">Đăng xuất</a></li>
                                                     </ul>
                                                 </li>
@@ -85,6 +70,9 @@
 						
 						<!-- Outer Box -->
                         <div class="outer-box clearfix">
+                            <a href="cart-page.php">
+                                <div class="search-box-btn"><span class="icon"></span><i class="fas fa-shopping-cart"></i></div>
+                            </a>
                             <div class="search-box-btn"><span class="icon"></span><i class="fas fa-search"></i></div>
                         </div>
                     </div>

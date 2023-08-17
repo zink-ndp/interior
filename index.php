@@ -2,7 +2,6 @@
 <html lang="en">
 
 <?php
-	require 'connect.php';
 	require 'head.php';
 ?>
 
@@ -106,7 +105,7 @@
 							<a href="residental-interior.html"><img src="images/resource/service-1.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
-							<h3><a href="residental-interior.html">Nội thất nhà ở</a></h3>
+							<h3><a href="residental-interior.html">Nội thất phòng khách</a></h3>
 							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies.</div>
 							<a href="residental-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -120,7 +119,7 @@
 							<a href="office-interior.html"><img src="images/resource/service-2.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
-							<h3><a href="office-interior.html">Thiết kế văn phòng</a></h3>
+							<h3><a href="office-interior.html">Thiết kế nhà bếp</a></h3>
 							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies. Seam lessly visualize quality intellectual.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -134,7 +133,7 @@
 							<a href="commercial-interior.html"><img src="images/resource/service-3.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
-							<h3><a href="commercial-interior.html">Nội thất thương mại</a></h3>
+							<h3><a href="commercial-interior.html">Không gian phòng ngủ</a></h3>
 							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies. Seam lessly visualize quality intellectual.</div>
 							<a href="commercial-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -163,9 +162,9 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-desk-1"></span>
+								<span class="icon"><i class="fas fa-couch fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất văn phòng</a></h3>
+							<h3><a href="office-interior.html">Nội thất phòng khách</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -177,9 +176,9 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-house-1"></span>
+								<span class="icon flaticon-house-1"><i class="fas fa-bed fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất nhà ở</a></h3>
+							<h3><a href="office-interior.html">Nội thất phòng ngủ</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -191,9 +190,9 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-shop"></span>
+								<span class="icon flaticon-shop"><i class="fas fa-utensils fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất nhà hàng</a></h3>
+							<h3><a href="office-interior.html">Nội thất nhà bếp</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -205,9 +204,9 @@
 					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-hospital"></span>
+								<span class="icon"><i class="fas fa-toilet fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất bệnh viện</a></h3>
+							<h3><a href="office-interior.html">Thiết bị vệ sinh</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -219,9 +218,9 @@
 					<div class="inner-box wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-apartment-1"></span>
+								<span class="icon flaticon-apartment-1"><i class="fas fa-umbrella-beach fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất căn hộ</a></h3>
+							<h3><a href="office-interior.html">Không gian ngoài trời</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -233,9 +232,9 @@
 					<div class="inner-box wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
 						<div class="content">
 							<div class="icon-box">
-								<span class="icon flaticon-hotel"></span>
+								<span class="icon flaticon-hotel"><i class="fas fa-laptop fa-xs"></i></span>
 							</div>
-							<h3><a href="office-interior.html">Nội thất nhà bếp</a></h3>
+							<h3><a href="office-interior.html">Phòng làm việc</a></h3>
 							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
 							<a href="office-interior.html" class="read-more">Xem thêm</a>
 						</div>
@@ -267,10 +266,10 @@
                 	
                 	<ul class="filter-tabs filter-btns text-center clearfix">
                         <li class="active filter" data-role="button" data-filter=".all">Tất cả</li>
-						<li class="filter" data-role="button" data-filter=".residential">Nhà ở</li>
-						<li class="filter" data-role="button" data-filter=".commercial">Thương mại</li>
-						<!-- <li class="filter" data-role="button" data-filter=".hospital"></li> -->
-						<li class="filter" data-role="button" data-filter=".office">Văn phòng</li>
+						<li class="filter" data-role="button" data-filter=".residential">Phòng khách</li>
+						<li class="filter" data-role="button" data-filter=".commercial">Phòng ngủ</li>
+						<li class="filter" data-role="button" data-filter=".office">Bếp</li>
+						<li class="filter" data-role="button" data-filter=".outside">Ngoài trời</li>
                     </ul>
                     
                 </div>
