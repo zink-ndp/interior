@@ -70,9 +70,15 @@
 						
 						<!-- Outer Box -->
                         <div class="outer-box clearfix">
-                            <a href="cart-page.php">
-                                <div class="search-box-btn"><span class="icon"></span><i class="fas fa-shopping-cart"></i></div>
-                            </a>
+                            <?php
+                                if (isset($_SESSION['id'])){
+                                    ?>
+                                    <a href="cart-page.php">
+                                        <div class="search-box-btn"><span class="icon"></span><i class="fas fa-shopping-cart"></i></div>
+                                    </a>
+                                    <?php
+                                }
+                            ?>
                             <div class="search-box-btn"><span class="icon"></span><i class="fas fa-search"></i></div>
                         </div>
                     </div>

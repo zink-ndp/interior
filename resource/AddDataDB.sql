@@ -56,6 +56,5 @@ INSERT INTO `products` VALUES (22,5,1,"Ghế ngoài trời Puyi Alu H78x56x59 AD
 INSERT INTO `products` VALUES (23,5,1,"Bộ ghế ngoài trời Bench Sixties cactus 170582",21420000,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","23.png");
 INSERT INTO `products` VALUES (24,5,1,"Ghế ngoài trời Fermob Plein air nutmeg",1400000,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","24.png");
 INSERT INTO `products` VALUES (25,5,1,"Ghế dài 3 chỗ",5750000,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","25.png");
-
-
+ 
 

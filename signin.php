@@ -41,16 +41,25 @@
             <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
               <div class="card card-plain">
                 <div class="card-header pb-0 text-start">
-                  <h4 class="font-weight-bolder">Đăng nhập</h4>
+                  <h4 class="font-weight-bolder">Đăng kí</h4>
                   <p class="mb-0">Chào mừng bạn</p>
                 </div>
                 <div class="card-body">
                   <form role="form" method="post" action="log.php">
                     <div class="mb-3">
-                      <input required type="text" name="usname" class="form-control form-control-lg" placeholder="Email hoặc SĐT" aria-label="Username">
+                      <input required type="text" name="name" class="form-control form-control-lg" placeholder="Nhập họ và tên của bạn" aria-label="Name" id="Name">
                     </div>
                     <div class="mb-3">
-                      <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Mật khẩu" aria-label="Password" id="passInput">
+                      <input required type="tel" name="phone" class="form-control form-control-lg" placeholder="Nhập số điện thoại" aria-label="Password" id="passInput">
+                    </div>
+                    <div class="mb-3">
+                      <input required type="email" name="email" class="form-control form-control-lg" placeholder="Nhập Email" aria-label="Username">
+                    </div>
+                    <div class="mb-3">
+                      <input required type="password" name="pass" class="form-control form-control-lg" placeholder="Nhập Mật khẩu" aria-label="Password" id="passInput">
+                    </div>
+                    <div class="mb-3">
+                      <input required type="password" name="repass" class="form-control form-control-lg" placeholder="Nhập lại Mật khẩu" aria-label="Password" id="passReput">
                     </div>
                     <div class="mb-3 mt-n2 d-flex justify-content-center">                      
                       <button class="bg_white" type="button" id="showPasswordBtn">
@@ -92,10 +101,10 @@
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
               <div class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'); background-size: cover;">
                 <span class="bg-gradient-primary opacity-6"></span>
-                <h4 class="mt-5 text-white font-weight-bolder position-relative">Bạn chưa có tài khoản?</h4>
-                <p class="text-white position-relative">Hãy đăng kí trở thành thành viên của Zink Orr'a để có trải nghiệm tuyệt vời <br> và nhận những ưu đãi hấp dẫn!</p>
+                <h4 class="mt-5 text-white font-weight-bolder position-relative">Đã là thành viên của Zink Orr'a?</h4>
+                <p class="text-white position-relative">Đăng nhập ngay để có trải nghiệm tuyệt vời <br> và nhận những ưu đãi hấp dẫn!</p>
                 <div class="text-center">
-                  <a href="signin.php" type="submit" class="theme-btn btn-style-two w-30 mt-5 mb-0"><span class="txt">Đăng kí ngay</span></a>
+                  <a href="login.php" type="submit" class="theme-btn btn-style-two w-30 mt-5 mb-0"><span class="txt">Đăng nhập</span></a>
                 </div>
               </div>
             </div>
