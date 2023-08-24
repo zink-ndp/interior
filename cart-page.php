@@ -29,6 +29,9 @@
 
             <!--Cart Outer-->
             <div class="cart-outer">
+                <?php
+                    
+                ?>
                 <div class="table-outer">
                     <table class="cart-table">
                         <thead class="cart-header">
@@ -51,25 +54,25 @@
                                 $rs = $conn->query($sql);
                                 $total = 0;
                                 foreach ($rs as $sp) {
-                                    $sl += 1;
                                     $spid = $sp["PD_ID"];
                                     $query = "select p.PD_NAME, p.PD_PRICE, p.PD_PIC 
-                                                from products p 
-                                                join cart_detail cd on cd.PD_ID = p.PD_ID
-                                                where p.PD_ID = $spid";
+                                    from products p 
+                                    join cart_detail cd on cd.PD_ID = p.PD_ID
+                                    where p.PD_ID = $spid";
                                     $result = $conn->query($query);
                                     foreach ($result as $s) {
+                                        $sl += $sp["PD_QUANT"];
                                         
                             ?>
                         	<tr>
                                 <td class="prod-column">
                                     <div class="column-box">
-                                        <figure class="prod-thumb"><a href="product-detail.php?id=<?php echo $spid ?>"><img src="images/products/<?php echo $s["PD_PIC"] ?>" alt=""></a></figure>
+                                        <figure class="prod-thumb"><a href="product-detail.php?id=<?php echo $spid ?>"><img style="width: 130%;" src="images/products/<?php echo $s["PD_PIC"] ?>" alt=""></a></figure>
                                     </div>
                                 </td>
                                 <td><h4 class="prod-title"><?php echo $s["PD_NAME"] ?></h4></td>
                                 <td><?php echo number_format($s["PD_PRICE"]) ?> đ</td>
-                                <td><?php echo $sp["PD_QUANT"] ?></td>
+                                <td><input type="number" min="1" name="" id="" value="<?php echo $sp["PD_QUANT"] ?>"></td>
                                 <td><?php echo number_format($s["PD_PRICE"]*$sp["PD_QUANT"]) ?> đ</td>
                                 <td><a href="remove-in-cart.php?pdid=<?php echo $spid ?>" class="remove-btn"><span class="fas fa-times"></span></a></td>
                             </tr>
@@ -77,6 +80,9 @@
                                         $total +=  $s["PD_PRICE"]*$sp["PD_QUANT"];
                                     }
                                 } 
+                                if ($sl==0) {
+                                    echo '<td colspan="5"><h4>Chưa có sản phẩm nào trong giỏ hàng</h4></td>';
+                                }
                             ?>
                         </tbody>
                     </table>
@@ -93,9 +99,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="pull-right">
-                        <a href="shop.php" type="button" class="theme-btn cart-btn">Thêm sản phẩm khác</a>
+                        <a href="shop.php" type="button" class="theme-btn cart-btn" style="background-color: white; border: 1px solid #dfb162; color: #dfb162">Thêm sản phẩm khác</a>
+                        <!-- <a href="update-cart.php" type="button" class="theme-btn cart-btn ms-2">Cập nhật số lượng</a> -->
                     </div>
 
                 </div>

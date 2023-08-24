@@ -101,8 +101,8 @@
 				<!-- Service Block -->
 				<div class="service-block col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="residental-interior.html"><img src="images/resource/service-1.jpg" alt="" /></a>
+						<div class="image-container image" style="height: 200px !important;">
+							<a href="residental-interior.html"><img class="fit-image" src="images/resource/service-1.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
 							<h3><a href="residental-interior.html">Nội thất phòng khách</a></h3>
@@ -115,8 +115,8 @@
 				<!-- Service Block -->
 				<div class="service-block col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="office-interior.html"><img src="images/resource/service-2.jpg" alt="" /></a>
+						<div class="image-container image" style="height: 200px !important;">
+							<a href="office-interior.html"><img class="fit-image" src="images/resource/service-2.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
 							<h3><a href="office-interior.html">Thiết kế nhà bếp</a></h3>
@@ -129,8 +129,8 @@
 				<!-- Service Block -->
 				<div class="service-block col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="commercial-interior.html"><img src="images/resource/service-3.jpg" alt="" /></a>
+						<div class="image-container image" style="height: 200px !important;">
+							<a href="commercial-interior.html"><img  class="fit-image"src="images/resource/service-3.jpg" alt="" /></a>
 						</div>
 						<div class="lower-content">
 							<h3><a href="commercial-interior.html">Không gian phòng ngủ</a></h3>

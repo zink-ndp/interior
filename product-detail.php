@@ -58,18 +58,29 @@
                             	<div class="inner-column">
                                     <h4><?php echo $row['PD_NAME'] ?></h4>
                                     <div class="text"><?php echo $row['PD_DESCRI'] ?></div>
-                                    <div class="price">Price : <span><?php echo number_format($row['PD_PRICE']) ?> VND</span></div>
+                                    <div class="price">Giá niêm yết: <span><?php echo number_format($row['PD_PRICE']) ?> VND</span></div>
                                     
                                     <div class="clear-fix row">
                                         <div class="col-12">
-                                            <form action="add-cart.php" method="post">
+                                            <form method="post" id="myForm">
                                                 <span class="price">Số lượng</span> :</label><input class="quant_number price ms-3" type="number" value="1" min="1" name="quant"><br>
                                                 <input type="hidden" name="pdid" value="<?php echo $row["PD_ID"] ?>">
-                                                <button type="submit" class="theme-btn cart-btn px-4">Thêm vào giỏ hàng</button>
+                                                <button name="addcart-btn" type="submit" class="theme-btn cart-btn px-4">Thêm vào giỏ hàng</button>
+                                                <button name="buynow-btn" type="submit" class="theme-btn cart-btn ms-3 mt-4 px-4">Thanh toán ngay</button>
                                             </form>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="button" class="theme-btn cart-btn mt-4 px-4">Thanh toán ngay</button>
+                                            <script>
+                                                document.getElementById("myForm").addEventListener("submit", function(event) {
+                                                    const submitButton = event.submitter;
+
+                                                    if (submitButton.name === "addcart-btn") {
+                                                        this.action = "add-cart.php"; // Thay đổi trang khi nhấp nút "Submit for Page 1"
+                                                    } else if (submitButton.name === "buynow-btn") {
+                                                        this.action = "payment-page.php"; // Thay đổi trang khi nhấp nút "Submit for Page 2"
+                                                    }
+
+                                                    // Tiếp tục thực hiện submit form theo action đã thay đổi
+                                                });
+                                            </script>
                                         </div>
                                     </div>
                                 </div>

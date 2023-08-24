@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     17/08 1:37                                   */
+/* Created on:     24/08 1:42                                   */
 /*==============================================================*/
 
 
@@ -12,6 +12,10 @@ drop table if exists CART_DETAIL;
 
 drop table if exists CUSTOMMER;
 
+drop table if exists IB_DETAIL;
+
+drop table if exists IMPORT_BILL;
+
 drop table if exists INTERIOR;
 
 drop table if exists PAYMENT;
@@ -22,9 +26,13 @@ drop table if exists RATE;
 
 drop table if exists ROLE;
 
+drop table if exists SALE;
+
 drop table if exists STAFF;
 
 drop table if exists STATUS;
+
+drop table if exists TYPE;
 
 /*==============================================================*/
 /* Table: BILL                                                  */
@@ -36,6 +44,7 @@ create table BILL
    PM_ID                int not null,
    STF_ID               int not null,
    CTM_ID               int,
+   SL_CODE              char(20),
    B_TOTAL              int not null,
    B_DATE               date not null,
    primary key (B_ID)
@@ -78,6 +87,28 @@ create table CUSTOMMER
 );
 
 /*==============================================================*/
+/* Table: IB_DETAIL                                             */
+/*==============================================================*/
+create table IB_DETAIL
+(
+   PD_ID                int not null,
+   IB_ID                int not null,
+   PD_QUANT             numeric(8,0) not null,
+   primary key (PD_ID, IB_ID)
+);
+
+/*==============================================================*/
+/* Table: IMPORT_BILL                                           */
+/*==============================================================*/
+create table IMPORT_BILL
+(
+   IB_ID                int not null,
+   STF_ID               int not null,
+   IB_DATE              date not null,
+   primary key (IB_ID)
+);
+
+/*==============================================================*/
 /* Table: INTERIOR                                              */
 /*==============================================================*/
 create table INTERIOR
@@ -104,11 +135,12 @@ create table PRODUCTS
 (
    PD_ID                int not null,
    ITR_ID               int not null,
-   STF_ID               int not null,
+   TY_ID                int not null,
    PD_NAME              char(50) not null,
    PD_PRICE             int not null,
    PD_DESCRI            text not null,
    PD_PIC               text,
+   PD_QUANT             numeric(8,0) not null,
    primary key (PD_ID)
 );
 
@@ -137,6 +169,18 @@ create table ROLE
 );
 
 /*==============================================================*/
+/* Table: SALE                                                  */
+/*==============================================================*/
+create table SALE
+(
+   SL_CODE              char(20) not null,
+   SL_PERCENT           numeric(8,0) not null,
+   SL_START_DATE        date not null,
+   SL_END_DATE          date not null,
+   primary key (SL_CODE)
+);
+
+/*==============================================================*/
 /* Table: STAFF                                                 */
 /*==============================================================*/
 create table STAFF
@@ -162,6 +206,19 @@ create table STATUS
    primary key (ST_ID)
 );
 
+/*==============================================================*/
+/* Table: TYPE                                                  */
+/*==============================================================*/
+create table TYPE
+(
+   TY_ID                int not null,
+   TY_NAME              char(30) not null,
+   primary key (TY_ID)
+);
+
+alter table BILL add constraint FK_APDUNG foreign key (SL_CODE)
+      references SALE (SL_CODE) on delete restrict on update restrict;
+
 alter table BILL add constraint FK_COMFIRM foreign key (STF_ID)
       references STAFF (STF_ID) on delete restrict on update restrict;
 
@@ -186,11 +243,20 @@ alter table CART_DETAIL add constraint FK_RELATIONSHIP_4 foreign key (PD_ID)
 alter table CART_DETAIL add constraint FK_RELATIONSHIP_5 foreign key (CTM_ID)
       references CUSTOMMER (CTM_ID) on delete restrict on update restrict;
 
-alter table PRODUCTS add constraint FK_IN foreign key (ITR_ID)
+alter table IB_DETAIL add constraint FK_RELATIONSHIP_17 foreign key (IB_ID)
+      references IMPORT_BILL (IB_ID) on delete restrict on update restrict;
+
+alter table IB_DETAIL add constraint FK_RELATIONSHIP_18 foreign key (PD_ID)
+      references PRODUCTS (PD_ID) on delete restrict on update restrict;
+
+alter table IMPORT_BILL add constraint FK_RELATIONSHIP_16 foreign key (STF_ID)
+      references STAFF (STF_ID) on delete restrict on update restrict;
+
+alter table PRODUCTS add constraint FK_RELATIONSHIP_14 foreign key (ITR_ID)
       references INTERIOR (ITR_ID) on delete restrict on update restrict;
 
-alter table PRODUCTS add constraint FK_UP foreign key (STF_ID)
-      references STAFF (STF_ID) on delete restrict on update restrict;
+alter table PRODUCTS add constraint FK_RELATIONSHIP_15 foreign key (TY_ID)
+      references TYPE (TY_ID) on delete restrict on update restrict;
 
 alter table RATE add constraint FK_RATE foreign key (CTM_ID)
       references CUSTOMMER (CTM_ID) on delete restrict on update restrict;
