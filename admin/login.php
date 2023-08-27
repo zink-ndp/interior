@@ -23,17 +23,19 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form method="get" class="form-validate">
+                  <form action="log.php" method="get" class="form-validate">
                     <div class="form-group">
-                      <input id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
-                      <label for="login-username" class="label-material">User Name</label>
+                      <input id="login-username" type="text" name="email" required data-msg="Vui lòng nhập email đăng nhập" class="input-material">
+                      <label for="login-username" class="label-material">Email đăng nhập</label>
                     </div>
                     <div class="form-group">
-                      <input id="login-password" type="password" name="loginPassword" required data-msg="Please enter your password" class="input-material">
-                      <label for="login-password" class="label-material">Password</label>
-                    </div><a id="login" href="index.html" class="btn btn-primary">Login</a>
+                      <input id="login-password" type="password" name="pw" required data-msg="Vui lòng nhập mật khẩu" class="input-material">
+                      <label for="login-password" class="label-material">Mật khẩu</label>
+                    </div>
+                    <button type="submit" id="login" class="btn btn-primary">Đăng nhập</button>
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-                  </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a>
+                  </form>
+                  <a href="#" class="forgot-pass">Quên mật khẩu?</a>
                 </div>
               </div>
             </div>
@@ -41,7 +43,7 @@
         </div>
       </div>
       <div class="copyrights text-center">
-         <p>2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
+         <p>2018 &copy; Zink Orr'a</a></p>
       </div>
     </div>
     <!-- JavaScript files-->

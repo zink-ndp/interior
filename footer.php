@@ -34,6 +34,7 @@
                                             <li><a href="#">Chính sách bảo mật</a></li>
                                             <li><a href="#">Điều khoản & điều kiện</a></li>
                                             <li><a href="#">Hỏi và trả lời</a></li>
+											<li><a href="admin/login.php">Admin</a></li>
                                         </ul>
                                     </div>
 								</div>

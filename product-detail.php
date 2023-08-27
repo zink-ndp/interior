@@ -48,11 +48,12 @@
                         $query = "select * from products where PD_ID = ".$spid;
                         $result = $conn->query($query);
                         $row = $result->fetch_assoc();
+                        $pd_type = $row['TY_ID'];
                     ?>
                     <div class="basic-details">
                         <div class="row clearfix">
                             <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                                <figure class="image-box"><a href="images/resource/products/9.jpg" class="lightbox-image" title="Image Caption Here"><img src="images/products/<?php echo $row['PD_PIC'] ?>" alt=""></a></figure>
+                                <figure class="image-box"><a href="images/products/<?php echo $row['PD_PIC'] ?>" class="lightbox-image" title="Image Caption Here"><img src="images/products/<?php echo $row['PD_PIC'] ?>" alt=""></a></figure>
                             </div>
                             <div class="info-column col-lg-6 col-md-12 col-sm-12">
                             	<div class="inner-column">
@@ -232,91 +233,45 @@
         <div class="auto-container">
             <!--Sec Title-->
             <div class="title-box">
-            	<h2>Related Products</h2>
+            	<h2>Sản phẩm liên quan</h2>
             </div>
             
             <div class="row clearfix">
-				
-				<!--Shop Item-->
-                <div class="shop-item col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image">
-                            <a href="product-detail.html"><img src="images/resource/products/2.jpg" alt="" /></a>
-                            <div class="overlay-box">
-                                <ul class="option-box">
-                                    <li><a href="#"><span class="far fa-heart"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                    <li><a href="images/resource/products/2.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h3><a href="product-detail.html">SIDE-TIE TANK</a></h3>
-                            <div class="price">$39.32</div>
-                        </div>
-                    </div>
-                </div>
-                
                 <!--Shop Item-->
-                <div class="shop-item col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image">
-                            <a href="product-detail.html"><img src="images/resource/products/3.jpg" alt="" /></a>
-                            <div class="overlay-box">
-                                <ul class="option-box">
-                                    <li><a href="#"><span class="far fa-heart"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                    <li><a href="images/resource/products/3.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h3><a href="product-detail.html">COLD CREWNECK</a></h3>
-                            <div class="price">$21.00</div>
-                        </div>
-                    </div>
-                </div>
                 
-                <!--Shop Item-->
-                <div class="shop-item col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image">
-                            <a href="product-detail.html"><img src="images/resource/products/4.jpg" alt="" /></a>
-                            <div class="overlay-box">
-                                <ul class="option-box">
-                                    <li><a href="#"><span class="far fa-heart"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                    <li><a href="images/resource/products/4.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
-                                </ul>
+                <?php
+                    $sql = "select * from products where TY_ID = {$pd_type} and PD_ID <> {$spid} limit 4";
+                    $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        $result = $conn->query($sql);
+                        $result_all = $result -> fetch_all(MYSQLI_ASSOC);
+                        foreach ($result_all as $row) {
+                ?>
+
+                    <div class="shop-item col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <a href="product-detail.html"><img src="images/products/<?php echo $row['PD_PIC'] ?>" alt="" /></a>
+                                <div class="overlay-box">
+                                    <ul class="option-box">
+                                        <li><a href="#"><span class="far fa-heart"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
+                                        <li><a href="images/resource/products/4.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="tag-banner">Trending</div>
                             </div>
-                            <div class="tag-banner">Trending</div>
-                        </div>
-                        <div class="lower-content">
-                            <h3><a href="product-detail.html">WINTER WALKING</a></h3>
-                            <div class="price">$91.50</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Shop Item-->
-                <div class="shop-item col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image">
-                            <a href="product-detail.html"><img src="images/resource/products/1.jpg" alt="" /></a>
-                            <div class="overlay-box">
-                                <ul class="option-box">
-                                    <li><a href="#"><span class="far fa-heart"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                    <li><a href="images/resource/products/1.jpg" class="lightbox-image" data-fancybox="products"><span class="fa fa-search"></span></a></li>
-                                </ul>
+                            <div class="lower-content">
+                                <h3><a href="product-detail.html">WINTER WALKING</a></h3>
+                                <div class="price">$91.50</div>
                             </div>
                         </div>
-                        <div class="lower-content">
-                            <h3><a href="product-detail.html">MULTI-WAY ULTRA</a></h3>
-                            <div class="price">$50.22</div>
-                        </div>
                     </div>
-                </div>
+
+                <?php
+                        }
+                    }
+                ?>
 				
 			</div>
 			

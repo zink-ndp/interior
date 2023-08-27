@@ -73,8 +73,16 @@
                             <?php
                                 if (isset($_SESSION['id'])){
                                     ?>
-                                    <a href="cart-page.php">
-                                        <div class="search-box-btn"><span class="icon"></span><i class="fas fa-shopping-cart"></i></div>
+                                    <a style="position: relative;;" href="cart-page.php">
+                                        <div class="search-box-btn">
+                                            <span class="icon"></span><i class="fas fa-shopping-cart"></i>
+                                            <?php
+                                                $sql = "select sum(PD_quant) as sl from cart_detail where CTM_ID = {$_SESSION['id']}";
+                                                $result = $conn->query($sql);
+                                                $sl = $result->fetch_assoc();
+                                            ?>
+                                            <span><?php echo $sl['sl'] ?></span>
+                                        </div>
                                     </a>
                                     <?php
                                 }

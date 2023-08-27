@@ -72,7 +72,15 @@
                                 </td>
                                 <td><h4 class="prod-title"><?php echo $s["PD_NAME"] ?></h4></td>
                                 <td><?php echo number_format($s["PD_PRICE"]) ?> đ</td>
-                                <td><input type="number" min="1" name="" id="" value="<?php echo $sp["PD_QUANT"] ?>"></td>
+                                <td>
+                                    <form action="update-cart.php" method="post">
+                                        <input class="width: 100px !important;" type="number" min="1" name="pdq" id="" value="<?php echo $sp["PD_QUANT"] ?>">
+                                        <div style="text-align: center">
+                                            <input type="hidden" name="pdid" value="<?php echo $spid ?>">
+                                            <button style="padding: 5px 10px; background-color: white; border: 1px solid #dfb162; color: #dfb162" type="submit">Cập nhật<i class="fas fa-sync-alt ms-2"></i></button>
+                                        </div>
+                                    </form>
+                                </td>
                                 <td><?php echo number_format($s["PD_PRICE"]*$sp["PD_QUANT"]) ?> đ</td>
                                 <td><a href="remove-in-cart.php?pdid=<?php echo $spid ?>" class="remove-btn"><span class="fas fa-times"></span></a></td>
                             </tr>
@@ -100,9 +108,22 @@
                         </div>
                     </div>
                     <div class="pull-right">
-                        <a href="shop.php" type="button" class="theme-btn cart-btn" style="background-color: white; border: 1px solid #dfb162; color: #dfb162">Thêm sản phẩm khác</a>
-                        <!-- <a href="update-cart.php" type="button" class="theme-btn cart-btn ms-2">Cập nhật số lượng</a> -->
+                        <a href="del-all-cart.php" id="showAlertButton" type="button" class="theme-btn cart-btn" style="background-color: white; border: 1px solid #dfb162; color: #dfb162">Xoá tất cả</a>
+                        <a href="shop.php" type="button" class="theme-btn cart-btn ms-2">Thêm sản phẩm khác</a>
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const showAlertButton = document.getElementById("showAlertButton");
+
+                            showAlertButton.addEventListener("click", function() {
+                                const result = window.confirm("Bạn có chắc chắn muốn xoá tất cả sản phẩm trong giỏ hàng?");
+                                
+                                if (result) {
+                                    window.location.href = 'del-all-cart.php';
+                                } 
+                            });
+                        });
+                    </script>
 
                 </div>
 
